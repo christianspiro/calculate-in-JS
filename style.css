@@ -48,6 +48,9 @@ table {
     text-align: center;
 
 }
+.title{
+    text-align: center;
+}
 tr {
     border: 1px solid black;
     background-color: lavender;
