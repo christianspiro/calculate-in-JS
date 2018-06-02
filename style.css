@@ -1,60 +1,70 @@
-body{
+body {
     font-family: 'Sunflower', sans-serif;
+    background-color: ghostwhite;
 }
-.btns{
+
+.btns {
 
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
 }
 
-.btn-dark{
+.btn-dark {
     background-color: darkslategray;
     color: white;
 }
-.btn-equal{
+
+.btn-equal {
     text-align: center;
-    background-color: yellow;
+    background-color: goldenrod;
     width: 74.8vh;
     height: 6vh;
+    font-size: 44px;
 }
-.btn-equal:hover{
+
+.btn-equal:hover {
     cursor: pointer;
 }
-.container{
+
+.container {
     display: flex;
     justify-content: center;
     flex-wrap: nowrap;
-
-
-}
-.calculator{
+    align-content: center;
 
 }
-.input{
-    font-size: 40px;
-    text-align: center;
+
+.calculator {
 
 }
+
+
 .screen {
     background-color: lavender;
-    width: 74.8vw;
-
-
+    font-size: 50px;
+    width: 74.8vh;
+    text-align: center;
 }
+
 table {
     height: 50vh;
     width: 75vh;
     text-align: center;
 
 }
-.title{
+
+.title {
     text-align: center;
 }
+table{
+    table-layout: fixed;
+}
 tr {
-    border: 1px solid black;
+
     background-color: lavender;
 }
+
 tr:hover {
     cursor: pointer;
 }

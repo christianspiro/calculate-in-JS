@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>A simple javascript based calculator web app</title>
+    <title>JavaScript Calculator</title>
     <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <h1 class="title"> A light Javascript based calculator!</h1>
 <div class="container">
-    <div class="calculator">
 
-        <div class="screen"><span class="input">input</span></div>
+    <div class="calculator">
+        <div class="screen">input</div>
+
+
         <table>
             <tr>
-                <td class="btn-dark">AC</td>
-                <td class="btn-dark">CE</td>
-                <td class="btn-dark">/</td>
-                <td class="btn-dark">*</td>
+                <td class="btn-dark" id="all-clear">AC</td>
+                <td class="btn-dark" id="entry-clear">CE</td>
+                <td class="btn-dark" data-ops='/'>/</td>
+                <td class="btn-dark" data-ops="*" >*</td>
             </tr>
             <tr>
-                <td class="btn-light">7</td>
-                <td class="btn-light">8</td>
-                <td class="btn-light">9</td>
-                <td class="btn-dark">+</td>
+                <td class="btn-light" data-num="7">7</td>
+                <td class="btn-light" data-num="8">8</td>
+                <td class="btn-light" data-num="9">9</td>
+                <td class="btn-dark" data-ops="+">+</td>
             </tr>
             <tr>
               <td class="btn-light">4</td>
@@ -44,5 +48,6 @@
 
 
 </div>
+<script src="script.js" ></script>
 </body>
 </html>
