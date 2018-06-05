@@ -1,70 +1,66 @@
 body {
     font-family: 'Sunflower', sans-serif;
-    background-color: ghostwhite;
+    background: linear-gradient(to right, #59c173, #a17fe0, #5d26c1);
 }
 
-.btns {
+.btn {
+    border: 1px lavenderblush;
+    border-radius: 30%;
+    background-color: lavender;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 2em;
 
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
 }
 
-.btn-dark {
-    background-color: darkslategray;
-    color: white;
-}
-
-.btn-equal {
-    text-align: center;
-    background-color: goldenrod;
-    width: 74.8vh;
-    height: 6vh;
-    font-size: 44px;
-}
-
-.btn-equal:hover {
+.btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
 }
 
+.dark {
+    background: linear-gradient(to right, #ad5389, #3c1053);
+    color: white;
+
+}
+
+.equal {
+    text-align: center;
+    background: linear-gradient(to right, #ad5389, #3c1053);
+    border-radius: 4px;
+    color: white;
+
+}
+
+.equal:hover {
+    cursor: pointer;
+    transform: scale(1.09);
+}
+
 .container {
-    display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
-    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(50px, 125px));
+    grid-template-rows: repeat(5, minmax(50px, 125px));
+    grid-gap: 20px 20px;
+    grid-template-areas: "aC cE divide multi" "seven eight nine add" "four five six subtract" "one two three decimal" ". . equals equals";
 
 }
 
-.calculator {
+.equals {
 
+    width: 29vw;
 }
-
 
 .screen {
+    border-radius: 4px;
+    margin: auto;
     background-color: lavender;
     font-size: 50px;
-    width: 74.8vh;
     text-align: center;
-}
-
-table {
-    height: 50vh;
-    width: 75vh;
-    text-align: center;
-
+    width: 28vw;
 }
 
 .title {
     text-align: center;
-}
-table{
-    table-layout: fixed;
-}
-tr {
-
-    background-color: lavender;
-}
-
-tr:hover {
-    cursor: pointer;
+    font-size: 2.5em;
 }
