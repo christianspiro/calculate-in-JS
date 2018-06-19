@@ -7,33 +7,39 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 class="title"> A light Javascript based calculator!</h1>
-  <div class="container">
-      <div class="calculator">
+<h1 class="title">Calculate.Js</h1>
+<div id="screen">Text</div>
+<div class="container">
 
-          <div class="screen"><span class="input">input</span></div>
-            <div class="btns">
-            <div class="btn-dark" >AC</div>
-            <div class="btn-dark" >CE</div>
-            <div class="btn-dark" >/</div>
-            <div class="btn-dark">*</div>
-            <div class="btn-light">7</div>
-            <div class="btn-light">8</div>
-            <div class="btn-light">9</div>
-            <div class="btn-dark" >+</div>
-            <div class="btn-light">4</div>
-            <div class="btn-light">5</div>
-            <div class="btn-light">6</div>
-            <div class="btn-dark" >-</div>
-            <div class="btn-light">1</div>
-            <div class="btn-light">2</div>
-            <div class="btn-light">3</div>
-            <div class="btn-dark">.</div>
-            <div class="btn-equal">=</div>
-          </div>
+    <div class="calculator">
+        <div class="btn-group">
+            <button class="ops button btn-dark" id="clear-all" data-ops="AC">AC</button>
+            <button class="ops button btn-dark" id="clear-screen" data-op="C">C</button>
+            <button class="ops button btn-dark" data-ops="switch">+/-</button>
+            <button class="ops button btn-dark" data-ops="/">/</button>
 
-      </div>
 
-  </div>
+            <button class="num button btn-light" data-num="9">9</button>
+            <button class="num button btn-light" data-num="8">8</button>
+            <button class="num button btn-light" data-num="7">7</button>
+            <button class="ops button btn-dark" data-op="*">*</button>
+
+            <button class="num button btn-light" data-num="6">6</button>
+            <button class="num button btn-light" data-num="5">5</button>
+            <button class="num button btn-light" data-num="4">4</button>
+            <button class="num button btn-dark" data-ops="-">-</button>
+
+            <button class="num button btn-light" data-num="3">3</button>
+            <button class="num button btn-light" data-num="2">2</button>
+            <button class="num button btn-light" data-num="1">1</button>
+            <button class="ops button btn-dark" data-ops="+">+</button>
+
+            <button class="num button btn-light" data-num="0">0</button>
+            <button class="ops button btn-dark" data-ops=".">.</button>
+            <button id="equal" class="ops button" data-ops="=">=</button>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,36 +1,65 @@
-body{
+body {
     font-family: 'Sunflower', sans-serif;
 }
-.btns{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
 
-}
-.btns>* {
-    flex: 1 1 80px;
-}
-.btn-dark{
-    background-color: darkslategray;
-}
-.container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-}
-.calculator{
+.button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
-    width: 100%;
+    align-items: center;
+    flex: 0 1 20%;
+    margin: 16px;
+    padding: 8px;
+    font-size: 1.5em;
+    border-radius: 3px;
 }
-.input{
-    position: absolute;
-    bottom:12px;
-    right: 0;
+.btn-dark{
+    background-color: darkslateblue;
+    color: white;
 }
-.screen {
+.btn-light{
+    background-color: cadetblue;
+    color: white;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 60%;
+    min-width: 700px;
 
 }
+
+.btn-group {
+    display: flex;
+    flex: 0 1 100%;
+    flex-wrap: wrap;
+
+}
+#equal{
+    flex-grow: 2;
+    background-color: aquamarine;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    font-size: 2em;
+}
+
+#screen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size:1.5em;
+    padding: 0 10px;
+    flex: 0 1 60%;
+}
+
