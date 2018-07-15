@@ -1,5 +1,5 @@
 (function (){
- //Allows me to use el.something to call on the document. 
+ //Allows me to use el.something to call on the document.
 let el = (element) => {
     if (element.charAt(0) === "#"){
         //checks for id
