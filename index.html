@@ -3,39 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>A simple javascript based calculator web app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 class="title">Calculate.Js</h1>
-<div id="screen">Text</div>
+<h1 class="title">Calculate in JS</h1>
+<div class="external"><h1 id="screen">0</h1></div>
 <div class="container">
 
     <div class="calculator">
         <div class="btn-group">
             <button class="ops button btn-dark" id="clear-all" data-ops="AC">AC</button>
-            <button class="ops button btn-dark" id="clear-screen" data-op="C">C</button>
+            <button class="ops button btn-dark" id="clear-screen" data-ops="C">C</button>
             <button class="ops button btn-dark" data-ops="switch">+/-</button>
-            <button class="ops button btn-dark" data-ops="/">/</button>
+            <button class="ops button btn-dark" data-ops="div">/</button>
 
 
             <button class="num button btn-light" data-num="9">9</button>
             <button class="num button btn-light" data-num="8">8</button>
             <button class="num button btn-light" data-num="7">7</button>
-            <button class="ops button btn-dark" data-op="*">*</button>
+            <button class="ops button btn-dark" data-ops="mul">*</button>
 
             <button class="num button btn-light" data-num="6">6</button>
             <button class="num button btn-light" data-num="5">5</button>
             <button class="num button btn-light" data-num="4">4</button>
-            <button class="num button btn-dark" data-ops="-">-</button>
+            <button class="ops  button btn-dark" data-ops="sub">-</button>
 
             <button class="num button btn-light" data-num="3">3</button>
             <button class="num button btn-light" data-num="2">2</button>
             <button class="num button btn-light" data-num="1">1</button>
-            <button class="ops button btn-dark" data-ops="+">+</button>
+            <button class="ops button btn-dark" data-ops="add">+</button>
 
             <button class="num button btn-light" data-num="0">0</button>
-            <button class="ops button btn-dark" data-ops=".">.</button>
+            <button class="ops button btn-dark" data-ops="deci">.</button>
             <button id="equal" class="ops button" data-ops="=">=</button>
         </div>
     </div>
