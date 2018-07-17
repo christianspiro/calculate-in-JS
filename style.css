@@ -3,13 +3,8 @@ body {
 }
 
 .button {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex: 0 1 20%;
-    margin: 16px;
-    padding: 8px;
+    margin: .5em;
+    padding: .5em;
     font-size: 1.5em;
     border-radius: 3px;
 }
@@ -21,31 +16,23 @@ body {
     background-color: cadetblue;
     color: white;
 }
-.container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
+
 
 .calculator {
     display: flex;
-    flex-wrap: wrap;
-    flex: 0 1 60%;
-    min-width: 700px;
+    margin: auto;
 
 }
 
 .btn-group {
-    display: flex;
-    flex: 0 1 100%;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    margin: auto;
 
 }
 #equal{
-    flex-grow: 2;
     background-color: aquamarine;
-    color: white;
 }
 
 .title {
