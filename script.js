@@ -15,58 +15,102 @@
         let nums = el(".num"),
             ops = el(".ops"),
             screen = el("#screen"),
+            plusOrMinus = el("#switch"),
+            equals = el("#equal"),
+            clearAll = el("#clear-all"),
+            clearScreen = el("#clear-screen"),
             firstValue="",
             secondValue="",
-            resultValue;
+            resultValue,
+            operator;
 
 
         //Click Events for Buttons
         Array.from(nums).forEach(function(element) {
-            element.addEventListener('click', buttonsNum);
+            element.addEventListener('click', setValue);
         });
         Array.from(ops).forEach(function(element) {
-            element.addEventListener('click', buttonsOps);
+            element.addEventListener('click', moveValue);
 
         });
-        //functionality of buttons and triggering other events
-        function buttonsOps() {
-                switch (this.dataset.ops) {
-                    case "switch":
-                        console.log("switch");
-                        break;
-                    case "div":
-                        console.log("divide");
-                        break;
-                    case "mul":
-                        console.log("multiply");
-                        break;
-                    case "sub":
-                        console.log("subtract");
-                        break;
-                    case "add":
-                        console.log("fucking add christ");
-                        break;
-                    case "deci":
-                        console.log("decimal");
-                        break;
-                    case "=":
-                        console.log("equals");
-                        break;
-                    case "AC":
-                        console.log("all clear");
-                        break;
-                    case "C":
-                        console.log("clear screen");
-                        break;
-                    default:
-                        break;
+        plusOrMinus.addEventListener("click", changeSign);
+        equals.addEventListener("click", displayValue);
+        clearAll.addEventListener("click", cAll);
+        clearScreen.addEventListener("click", cScreen);
+
+        //functionality of buttons and calculation
+        //Sets first value to the currently pressed button and clears the result.
+        //Also updates the screen on click.
+        function setValue(){
+            if (resultValue){
+                firstValue = this.dataset.num;
+                resultValue="";
+            } else {
+                firstValue += this.dataset.num;
+            }
+            screen.innerHTML = firstValue;
+        }
+        function moveValue(){
+            secondValue = firstValue;
+            firstValue ="";
+            operator = this.dataset.ops;
+        }
+        function changeSign(){
+            /* Check if firstValue exists and if it does check if +/- and alternate */
+            if(firstValue) {
+                if (firstValue[0] !== "-"){
+                    firstValue = "-" + firstValue;
+                    screen.innerHTML = firstValue;
+                } else {
+                    let clearSymbols = /[0-9]/g;
+                    firstValue = firstValue.match(clearSymbols).join('');
+                    screen.innerHTML = firstValue;
+                }
+            }else {
+                console.log("Error");
             }
         }
-        function buttonsNum(){
-
+        function displayValue() {
+            firstValue = parseFloat(firstValue);
+            secondValue = parseFloat(secondValue);
+                switch (operator) {
+                    case "div":
+                        resultValue = secondValue / firstValue;
+                        break;
+                    case "mul":
+                        resultValue = secondValue * firstValue;
+                        break;
+                    case "sub":
+                        resultValue = secondValue - firstValue;
+                        break;
+                    case "add":
+                        resultValue = secondValue + firstValue;
+                        break;
+                    default:
+                        resultValue = firstValue;
+                        break;
+            }
+            if (!isFinite(resultValue)) {
+                if (isNaN(resultValue)) {
+                    resultValue = "How'd you break this?"
+                } else {
+                    resultValue = "OH NO, NOT DIVIDING BY ZERO!!!"
+                }
+            }
+            screen.innerHTML = resultValue;
+            firstValue = "0";
+            secondValue = resultValue;
         }
-        function calc(){
 
+
+            function cAll(){
+                firstValue ="";
+                secondValue="";
+                screen.innerHTML = 0;
+        }
+        function cScreen(){
+                firstValue = "";
+                screen.innerHTML=0;
         }
 
 

@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>A simple javascript based calculator web app</title>
+    <meta name="description" content="A simple pure JavaScript calculator web app. Responsive, light and simple to use!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1 class="title">Calculate in JS</h1>
+<h1 class="title">Calculate with JavaScript</h1>
 <div class="external"><h1 id="screen">0</h1></div>
 <div class="container">
 
     <div class="calculator">
         <div class="btn-group">
-            <button class="ops button btn-dark" id="clear-all" data-ops="AC">AC</button>
-            <button class="ops button btn-dark" id="clear-screen" data-ops="C">C</button>
-            <button class="ops button btn-dark" data-ops="switch">+/-</button>
+            <button class=" button btn-dark" id="clear-all" >AC</button>
+            <button class=" button btn-dark" id="clear-screen" >C</button>
+            <button id="switch" class=" button btn-dark" >+/-</button>
             <button class="ops button btn-dark" data-ops="div">/</button>
 
 
@@ -36,11 +37,17 @@
             <button class="ops button btn-dark" data-ops="add">+</button>
 
             <button class="num button btn-light" data-num="0">0</button>
-            <button class="ops button btn-dark" data-ops="deci">.</button>
-            <button id="equal" class="ops button" data-ops="=">=</button>
+            <button class="num button btn-dark" data-num=".">.</button>
+            <button id="equal" class=" button" >=</button>
         </div>
     </div>
 </div>
+<footer>
+    <h3>Developed by Christian Spiro, Alpha Development Group's Lead Dev</h3>
+    <h4>For bug reports, functionality requests and to fork this project:
+       <a href="https://github.com/christianspiro/calculate-in-JS">Github</a></h4>
+
+</footer>
 <script src="script.js"></script>
 </body>
 </html>
